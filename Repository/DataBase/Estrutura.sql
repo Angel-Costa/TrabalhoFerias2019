@@ -6,7 +6,7 @@ CREATE TABLE estados(
 	data_criacao DATETIME2,
 	registro_ativo BIT
 );
-DROP TABLE cidades;
+
 CREATE TABLE cidades(
 	id INT PRIMARY KEY IDENTITY(1,1),
 	estado_id INT,
@@ -16,8 +16,7 @@ CREATE TABLE cidades(
 	data_criacao DATETIME2,
 	registro_ativo BIT
 );
-SELECT * FROM cidades;
-DROP TABLE clientes;
+
 CREATE TABLE clientes(
 	id INT PRIMARY KEY IDENTITY(1,1),
 	id_cidade INT,
@@ -32,7 +31,7 @@ CREATE TABLE clientes(
 	data_criacao DATETIME2,
 	registro_ativo BIT
 );
-DROP TABLE	projetos;
+
 CREATE TABLE projetos(
 	id INT PRIMARY KEY IDENTITY(1,1),
 	id_cliente INT,
@@ -43,7 +42,7 @@ CREATE TABLE projetos(
 	data_criacao DATETIME2,
 	registro_ativo BIT
 );
-DROP TABLE usuarios;
+
 CREATE TABLE usuarios(
 	id INT PRIMARY KEY IDENTITY(1,1),
 	nome VARCHAR(50),
@@ -52,14 +51,14 @@ CREATE TABLE usuarios(
 	data_criacao DATETIME2,
 	registro_ativo BIT
 );
-DROP TABLE categorias;
+
 CREATE TABLE categorias(
 	id INT PRIMARY KEY IDENTITY(1,1),
 	nome VARCHAR(50),
 	data_criacao DATETIME2,
 	registro_ativo BIT
 );
-DROP TABLE tarefas;
+
 CREATE TABLE tarefas(
 	id INT PRIMARY KEY IDENTITY(1,1),
 	id_usuario_responsavel INT,
