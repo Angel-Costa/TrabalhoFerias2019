@@ -8,13 +8,13 @@ using System.Web.Mvc;
 
 namespace View.Controllers
 {
-    public class CategoriaController : Controller
+    public class UsuarioController : Controller
     {
-        private CategoriaRepository repository;
+        private UsuarioRepository repository;
 
-        public CategoriaController()
+        public UsuarioController()
         {
-            repository = new CategoriaRepository();
+            repository = new UsuarioRepository();
         }
 
         [HttpGet]
@@ -26,16 +26,16 @@ namespace View.Controllers
         [HttpGet]
         public JsonResult ObterTodos(string busca)
         {
-            List<Categoria> categorias = repository.ObterTodos(busca);
-            return Json(categorias, JsonRequestBehavior.AllowGet);
+            List<Usuario> usuarios = repository.ObterTodos(busca);
+            return Json(usuarios, JsonRequestBehavior.AllowGet);
         }
 
         [HttpPost]
-        public JsonResult Store(Categoria categoria)
+        public JsonResult Store(Usuario usuario)
         {
-            categoria.RegistroAtivo = true;
-            repository.Inserir(categoria);
-            return Json(categoria);
+            usuario.RegistroAtivo = true;
+            repository.Inserir(usuario);
+            return Json(usuario);
         }
 
         [HttpGet]
@@ -49,17 +49,16 @@ namespace View.Controllers
         [HttpGet, Route("obterpeloid/{id}")]
         public JsonResult ObterPeloId(int id)
         {
-            Categoria categoria = repository.ObterPeloId(id);
-            return Json(categoria, JsonRequestBehavior.AllowGet);
+            Usuario usuario = repository.ObterPeloId(id);
+            return Json(usuario, JsonRequestBehavior.AllowGet);
         }
 
         [HttpPost]
-        public JsonResult Update(Categoria categoria)
+        public JsonResult Update(Usuario usuario)
         {
-            bool alterou = repository.Alterar(categoria);
+            bool alterou = repository.Alterar(usuario);
             return Json(new { status = alterou });
         }
-
     }
 
 }

@@ -1,5 +1,10 @@
-﻿using System;
+﻿using Model;
+using Repository.DataBase;
+using Repository.Interfaces;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,7 +12,7 @@ using System.Threading.Tasks;
 namespace Repository.Repositories
 {
 
-    /*
+    
 public class TarefaRepository : ITarefaRepository
 {
    public bool Delete(int id)
@@ -146,7 +151,7 @@ duracao = @DURACAO WHERE id = @ID";
        return quantidade == 1;
    }
 }
-*/
+
 
 }
 

@@ -11,9 +11,9 @@ namespace Repository.Interfaces
     {
         int Inserir(Categoria categoria);
 
-        bool Delete(int id);
+        bool Apagar(int id);
 
-        bool Update(Categoria categoria);
+        bool Alterar(Categoria categoria);
 
         List<Categoria> ObterTodos(string busca);
 

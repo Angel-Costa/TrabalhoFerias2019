@@ -63,7 +63,7 @@
                 }
             },
             error: function (data) {
-                alert("Erro obter categoria");
+                alert("Erro ao obter categoria");
             }
         })
     }

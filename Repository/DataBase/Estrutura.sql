@@ -1,5 +1,4 @@
-﻿DROP TABLE  IF EXISTS estados;
-CREATE TABLE estados(
+﻿CREATE TABLE estados(
 	id INT PRIMARY KEY IDENTITY(1,1),
 	nome VARCHAR(50),
 	sigla VARCHAR(2),

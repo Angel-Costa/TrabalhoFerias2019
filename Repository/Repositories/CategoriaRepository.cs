@@ -18,7 +18,7 @@ namespace Repository.Repositories
             context = new SistemaContext();
         }
 
-        public bool Delete(int id)
+        public bool Apagar(int id)
         {
             Categoria categoria = (from x in context.Categorias
                                    where x.Id == id
@@ -57,7 +57,7 @@ namespace Repository.Repositories
                     select x).ToList();
         }
 
-        public bool Update(Categoria categoria)
+        public bool Alterar(Categoria categoria)
         {
             Categoria categoriaOriginal = (from x in context.Categorias
                                            where x.Id == categoria.Id

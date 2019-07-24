@@ -37,6 +37,7 @@ namespace Model
 
         [ForeignKey("IdCidade")]
         public virtual Cidade Cidade { get; set; }
+
         [Column("id_cidade")]
         public int IdCidade { get; set; }
 
